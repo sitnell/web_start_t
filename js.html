@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet"  href="style.css">
+	<link rel="stylesheet" href="animated.css">
+	<title>js</title>
+</head>
+<body>
+	<div class="anima_block animate animated flash" id="anima_block">
+			<h1>SOMETHINH WRONG?</h1>
+	</div>
+	
+	
+	
+	<div class="form ">
+	<input type="text" id="need_color" value="">
+	<input type="text" id="opacityy" value="">
+	<input type="text" id="back" value="">
+	
+	<input type="submit" value="Zmina color" class="element" onclick="showPreview()">
+	<input type="submit" value="Zmina BC" class="element" onclick="changeBC()">
+</div>
+<div class="example">
+	
+	<div class="element" id="exampleBtn" onclick="addNewEl()">add
+	</div>
+	<div class="element" id="exampleBtn2" onclick="clearContainer()">clear
+	</div>
+	<div class="add_cont" id="myContainer"></div>
+	<div class="height"></div>
+	<div class="anima_block_second height animated fadeOut" id="anima_block_second">
+		<h1>SOMETHINH WRONG?</h1>
+	</div>
+	<div class="height"></div>
+	<script type="text/javascript" src="jquery/jquery-3.3.1.min.js"></script>
+
+	 <script type="text/javascript">
+	 		function showPreview(){
+	 			var buttonExample = document.getElementById('exampleBtn');
+	 			var buttonExample2 = document.getElementById('exampleBtn2');
+	 			var needColorInput = document.getElementById('need_color');
+	 			var needOpacityInput = document.getElementById('opacityy');
+	 			var needColor = needColorInput.value;
+	 			buttonExample.style.backgroundColor=needColor;
+	 			buttonExample2.style.backgroundColor=needColor;
+	 			var opacityy = needOpacityInput.value;
+	 			buttonExample.style.opacity=opacityy;
+	 			
+	 		}
+	 		function addNewEl(){
+	 			var container = document.getElementById('myContainer');
+	 			 container.innerHTML=container.innerHTML + '<h1>text</h1>';
+	 		}
+	 		function clearContainer() {
+var container = document.getElementById('myContainer');
+container.innerHTML='';
+}
+				
+				function changeBC(){
+					var container = document.getElementById('myContainer');
+					
+					var changebackground = document.getElementById('back');
+					container.style.backgroundColor=changebackground.value;
+
+				}
+	 			
+	 		
+
+
+	 		var scrollTopDocument=0;
+	 		var need_anima=$('#anima_block_second');
+	 		$(window).scroll(function () {
+           		 scrollTopDocument = $(this).scrollTop();
+           		 console.log(scrollTopDocument);
+           
+            	if(scrollTopDocument+$(this).height()-200>=need_anima.offset().top){
+            	need_anima.removeClass('fadeOut').removeClass('fadeOutRight').addClass('fadeInLeft');
+            }
+            	else{
+            	need_anima.removeClass('fadeInLeft');
+            }
+            	
+            	if(scrollTopDocument>=need_anima.offset().top+need_anima.height()-200){
+            	need_anima.removeClass('fadeInLeft').addClass('fadeOutRight');
+            }
+
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 
+	 </script>
+</body>
+</html>

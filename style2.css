@@ -1,10 +1,11 @@
 body{
     background-image: url(https://www.wtfast.com/wp-content/uploads/2017/06/altHero-1920px.jpg);
+    
     margin: 0px;
     font-family: "Josefin Sans", sans-serif;
 }
 header{
-height:70px;
+    height:70px;
     display: flex;
     flex-direction: row;
     background-color: #001f2c;
@@ -36,17 +37,29 @@ a{
     display: flex;
     color: #001f2c;
     font-weight: bolder;
+    padding:10px 0px;
+    font-size: 14px;
 
+
+}
+.dnl:hover{
+    opacity: .7;
+    transition: 0.3s ease ;
+
+}
+.wizard-right:hover{
+    transition: 0.3s ease ;
+    opacity: .7;
 }
 .flex3{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size:20px ;
     border-radius: 20px;
     background-color: yellow;
-    height: 40px;
-    width: 300px;
+    max-height: 40px;
+    width: 200px;
+    margin:50px 0px;
 
 
 }
@@ -62,6 +75,7 @@ a{
     transition: all .3s ease;
 }
 .element:hover{
+    transition: 0.3s ease ;
     background: rgba(255, 255, 255, 0.15);
 }
 .wizard_block{
@@ -119,7 +133,7 @@ a{
 .bord {
     display: flex;
     text-align: center;
-    margin:10px;
+    margin:10px 0px;
     border-bottom:1px solid white;
     width:30%;
 
@@ -127,7 +141,7 @@ a{
 
 footer{
 
-    height:300px;
+
     width:100%;
     background-color: #001f2c;
 }
@@ -135,11 +149,142 @@ footer{
     width: 100%;
     transition: all .3s ease;
 }
+
+
+.part_img{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    color:#009687;
+    letter-spacing: 8px;
+    background-color: white;
+
+}
+.logos{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.frame_o{
+    display: flex; 
+    justify-content: center;
+}
+.frame {
+    color: whitesmoke;
+    padding: 15px;
+    background-image: url(frame_img.jpg);
+    width: 470px;
+    margin-bottom: 50px;
+    height: 230px;
+    box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.8);
+}
+
+.frame:hover{
+    transition: 0.2s ease ;
+    opacity: .7;
+}
+
+
+.text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.name1{
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  color:whitesmoke;
+  font-weight: 600;
+}
+.under_text{
+    line-height:150%;
+    font-size: 14px;
+    width: 350px;
+    color: whitesmoke;
+    margin-bottom: 50px;
+}
+.down_block{
+ height: 500px;
+ background-color: #002738;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ color: whitesmoke;
+ font-size: 30px;
+ font-weight: 600;
+
+}
+.down_block img{
+   width: 350px;
+}
+.about{
+    margin: 50px 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.zahol{
+    color: whitesmoke;
+    letter-spacing: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.hrefs{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    line-height:140%;
+}
+.hrefs a{
+    color:#a7d3d0;
+}
+.hrefs a:hover{
+    color:#f4e913;
+}
+.social{
+    height:70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 15px;
+}
+.social_el{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #002738;
+    border:1px solid #001f2c;
+}
+a.social_el{
+    color:#a7d3d0;
+}
+a.social_el:hover{
+    cursor: pointer;
+    color :#f4e913;
+}
+.info{
+    background-color:#001f2c;
+    margin : 20px 20px 0px 20px;
+    line-height:140%;
+    font-size: 10px;
+    color:#a7d3d0;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
 @media screen and (max-width: 450px) {
 
     header{
         width: 100%;
-height:600px;
+        height:600px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -154,10 +299,12 @@ height:600px;
         display: flex;
         flex-direction: column;
         padding: 20px;
+        margin:100px 0px;
     }
     .wizard-left{
         width: 100%;
-        text-align: center;
+        margin-bottom: 40px;
+        text-align: start;
     }
     .wizard-right{
         display: flex;
@@ -175,7 +322,75 @@ height:600px;
     .flex3{
         margin: 20px 0px;
     }
+    .wizard-top-name{
+        font-size: 40px;
+    }
+    .wizarddesc1{
+        font-size: 20px;
+    }
+    .wizarddesc2{
+        font-size: 16px;
+    }
+
+    .text{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+    }
+    .about{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 30px;
+
+    }
+    .about_el{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 30px;
+    }
+
+    .social{
+        height: auto;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .social_el{
+        width: 50%;
+        min-height: 50px;
+    }
+    
+    .part_img{
+        max-width: 100%;
+        height: 300px;
+        font-size: 18px;
+
+    }
+    .logos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+        .frame{
+        display: flex;
+        justify-content: center;
+       background-image: url(frame_img.jpg);
+       background-size: 100%;
+       width: 300px;
+       height: 140px;
+   }
+   .down_block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 100%;
+    font-size: 20px;
+   }
+
 }
-
-
-
